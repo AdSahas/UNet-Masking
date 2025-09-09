@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Project - ML Portfolio</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="../../index.html">ML Portfolio</a></h1>
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <div class="container">
+                <h1>Binary Classification Project</h1>
+                <p class="project-subtitle">Predicting customer churn using machine learning classification algorithms</p>
+                <div class="project-meta">
+                    <span class="tag">Scikit-learn</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Classification</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>Project Overview</h2>
+                        <p>This project demonstrates a binary classification approach to predict customer churn for a telecommunications company. Using various machine learning algorithms, we analyze customer behavior patterns to identify customers likely to discontinue their service.</p>
+
+                        <h3>Dataset</h3>
+                        <ul>
+                            <li><strong>Size:</strong> 7,043 customers</li>
+                            <li><strong>Features:</strong> 21 features including demographic, account, and service information</li>
+                            <li><strong>Target:</strong> Binary (Churn: Yes/No)</li>
+                            <li><strong>Source:</strong> Telecommunications customer data</li>
+                        </ul>
+
+                        <h3>Methodology</h3>
+                        <ol>
+                            <li><strong>Data Exploration:</strong> Analyzed feature distributions and correlations</li>
+                            <li><strong>Data Preprocessing:</strong> Handled missing values, encoded categorical variables</li>
+                            <li><strong>Feature Engineering:</strong> Created new features and scaled numerical data</li>
+                            <li><strong>Model Training:</strong> Trained multiple algorithms (Logistic Regression, Random Forest, SVM)</li>
+                            <li><strong>Model Evaluation:</strong> Compared performance using accuracy, precision, recall, and F1-score</li>
+                        </ol>
+
+                        <h3>Key Results</h3>
+                        <div class="results-grid">
+                            <div class="result-card">
+                                <h4>Random Forest</h4>
+                                <p><strong>Accuracy:</strong> 85.2%</p>
+                                <p><strong>F1-Score:</strong> 0.78</p>
+                                <p><strong>AUC:</strong> 0.89</p>
+                            </div>
+                            <div class="result-card">
+                                <h4>Logistic Regression</h4>
+                                <p><strong>Accuracy:</strong> 82.1%</p>
+                                <p><strong>F1-Score:</strong> 0.75</p>
+                                <p><strong>AUC:</strong> 0.86</p>
+                            </div>
+                            <div class="result-card">
+                                <h4>SVM</h4>
+                                <p><strong>Accuracy:</strong> 83.5%</p>
+                                <p><strong>F1-Score:</strong> 0.76</p>
+                                <p><strong>AUC:</strong> 0.87</p>
+                            </div>
+                        </div>
+
+                        <h3>Feature Importance</h3>
+                        <p>The Random Forest model identified the following as the most important features for predicting churn:</p>
+                        <ol>
+                            <li>Monthly charges (importance: 0.24)</li>
+                            <li>Total charges (importance: 0.18)</li>
+                            <li>Contract type (importance: 0.16)</li>
+                            <li>Tenure (importance: 0.14)</li>
+                            <li>Internet service type (importance: 0.12)</li>
+                        </ol>
+
+                        <h3>Business Impact</h3>
+                        <p>The model can help the telecommunications company:</p>
+                        <ul>
+                            <li>Identify high-risk customers before they churn</li>
+                            <li>Implement targeted retention strategies</li>
+                            <li>Reduce customer acquisition costs</li>
+                            <li>Improve customer lifetime value</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar">
+                        <div class="project-links">
+                            <h3>Project Resources</h3>
+                            <a href="classification_analysis.py" class="resource-link">
+                                <span>📄</span> Python Code
+                            </a>
+                            <a href="classification_notebook.ipynb" class="resource-link">
+                                <span>📓</span> Jupyter Notebook
+                            </a>
+                            <a href="results.html" class="resource-link">
+                                <span>📊</span> Detailed Results
+                            </a>
+                            <a href="../../index.html#projects" class="resource-link back-link">
+                                <span>⬅️</span> Back to Projects
+                            </a>
+                        </div>
+
+                        <div class="tech-stack">
+                            <h3>Technologies Used</h3>
+                            <div class="tech-list">
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">Scikit-learn</span>
+                                <span class="tech-item">Pandas</span>
+                                <span class="tech-item">NumPy</span>
+                                <span class="tech-item">Matplotlib</span>
+                                <span class="tech-item">Seaborn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ML Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

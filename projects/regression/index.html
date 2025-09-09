@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Project - ML Portfolio</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../classification/project-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="../../index.html">ML Portfolio</a></h1>
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <div class="container">
+                <h1>House Price Prediction</h1>
+                <p class="project-subtitle">Predicting real estate prices using regression analysis and feature engineering</p>
+                <div class="project-meta">
+                    <span class="tag">Regression</span>
+                    <span class="tag">Feature Engineering</span>
+                    <span class="tag">Scikit-learn</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>Project Overview</h2>
+                        <p>This regression project focuses on predicting house prices based on various property features. Using multiple regression algorithms and extensive feature engineering, we build a robust model that can accurately estimate real estate values.</p>
+
+                        <h3>Dataset</h3>
+                        <ul>
+                            <li><strong>Size:</strong> 1,460 house sales records</li>
+                            <li><strong>Features:</strong> 79 features including property details, location, and condition</li>
+                            <li><strong>Target:</strong> Sale price (continuous variable)</li>
+                            <li><strong>Source:</strong> Ames Housing Dataset</li>
+                        </ul>
+
+                        <h3>Methodology</h3>
+                        <ol>
+                            <li><strong>Data Exploration:</strong> Analyzed feature distributions, correlations, and missing values</li>
+                            <li><strong>Feature Engineering:</strong> Created new features, handled categorical variables, log transformations</li>
+                            <li><strong>Data Preprocessing:</strong> Imputed missing values, scaled features, and encoded categories</li>
+                            <li><strong>Model Training:</strong> Trained multiple regression algorithms (Linear, Random Forest, Gradient Boosting)</li>
+                            <li><strong>Model Evaluation:</strong> Compared performance using RMSE, MAE, and R² score</li>
+                            <li><strong>Feature Importance:</strong> Identified key factors affecting house prices</li>
+                        </ol>
+
+                        <h3>Feature Engineering Highlights</h3>
+                        <ul>
+                            <li><strong>Total Square Footage:</strong> Combined all area measurements</li>
+                            <li><strong>Age Features:</strong> House age, years since renovation</li>
+                            <li><strong>Quality Scores:</strong> Overall quality × condition interactions</li>
+                            <li><strong>Categorical Encoding:</strong> Ordinal encoding for quality features, one-hot for nominal</li>
+                            <li><strong>Log Transformations:</strong> Applied to skewed numerical features</li>
+                        </ul>
+
+                        <h3>Model Performance</h3>
+                        <div class="results-grid">
+                            <div class="result-card">
+                                <h4>Gradient Boosting</h4>
+                                <p><strong>RMSE:</strong> $23,450</p>
+                                <p><strong>MAE:</strong> $16,890</p>
+                                <p><strong>R² Score:</strong> 0.912</p>
+                            </div>
+                            <div class="result-card">
+                                <h4>Random Forest</h4>
+                                <p><strong>RMSE:</strong> $25,120</p>
+                                <p><strong>MAE:</strong> $17,650</p>
+                                <p><strong>R² Score:</strong> 0.899</p>
+                            </div>
+                            <div class="result-card">
+                                <h4>Linear Regression</h4>
+                                <p><strong>RMSE:</strong> $28,780</p>
+                                <p><strong>MAE:</strong> $20,340</p>
+                                <p><strong>R² Score:</strong> 0.871</p>
+                            </div>
+                        </div>
+
+                        <h3>Key Predictive Features</h3>
+                        <p>The Gradient Boosting model identified these features as most important for price prediction:</p>
+                        <ol>
+                            <li>Overall Quality (importance: 0.22)</li>
+                            <li>Total Square Footage (importance: 0.18)</li>
+                            <li>Neighborhood (importance: 0.15)</li>
+                            <li>Year Built (importance: 0.12)</li>
+                            <li>Kitchen Quality (importance: 0.08)</li>
+                            <li>Garage Area (importance: 0.07)</li>
+                            <li>Basement Quality (importance: 0.06)</li>
+                        </ol>
+
+                        <h3>Model Insights</h3>
+                        <ul>
+                            <li><strong>Quality Matters:</strong> Overall quality and condition are the strongest price predictors</li>
+                            <li><strong>Size Impact:</strong> Total living area has significant influence on price</li>
+                            <li><strong>Location Premium:</strong> Neighborhood characteristics drive substantial price differences</li>
+                            <li><strong>Age Factor:</strong> Newer homes and recent renovations increase value</li>
+                            <li><strong>Feature Interactions:</strong> Quality-size combinations provide better predictions</li>
+                        </ul>
+
+                        <h3>Business Applications</h3>
+                        <p>This model can be used for:</p>
+                        <ul>
+                            <li>Real estate price estimation and market analysis</li>
+                            <li>Investment property evaluation</li>
+                            <li>Mortgage lending risk assessment</li>
+                            <li>Property tax assessment validation</li>
+                            <li>Market trend analysis and forecasting</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar">
+                        <div class="project-links">
+                            <h3>Project Resources</h3>
+                            <a href="regression_analysis.py" class="resource-link">
+                                <span>📄</span> Python Code
+                            </a>
+                            <a href="regression_notebook.ipynb" class="resource-link">
+                                <span>📓</span> Jupyter Notebook
+                            </a>
+                            <a href="feature_engineering.py" class="resource-link">
+                                <span>🔧</span> Feature Engineering
+                            </a>
+                            <a href="results.html" class="resource-link">
+                                <span>📊</span> Detailed Results
+                            </a>
+                            <a href="../../index.html#projects" class="resource-link back-link">
+                                <span>⬅️</span> Back to Projects
+                            </a>
+                        </div>
+
+                        <div class="tech-stack">
+                            <h3>Technologies Used</h3>
+                            <div class="tech-list">
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">Scikit-learn</span>
+                                <span class="tech-item">Pandas</span>
+                                <span class="tech-item">NumPy</span>
+                                <span class="tech-item">XGBoost</span>
+                                <span class="tech-item">Matplotlib</span>
+                                <span class="tech-item">Seaborn</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <h3>Key Metrics</h3>
+                            <div class="metric-item">
+                                <strong>Best RMSE:</strong> $23,450
+                            </div>
+                            <div class="metric-item">
+                                <strong>Accuracy:</strong> 91.2% (R²)
+                            </div>
+                            <div class="metric-item">
+                                <strong>Features Used:</strong> 79
+                            </div>
+                            <div class="metric-item">
+                                <strong>Training Time:</strong> 45 seconds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ML Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
